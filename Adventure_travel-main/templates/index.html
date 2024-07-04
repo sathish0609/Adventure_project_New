@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdventureTravel</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='') }}image/logo.jpg" type="image/x-icon">
+    <!----font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!----css file link---->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+   
+    <!------header section------>
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="#" class="logo">AdventureTravel</a>
+        <nav class="navbar" >
+            <a href="#home">home</a>
+            <a href="#package">package</a>
+            <a href="#services">services</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+            <a href="#"onclick="buynow()">Feedback</a>
+        </nav>
+        <div class="login">
+            <a href="/login"><button>login</button></a>
+            <a href="/register"><button>signup</button></a>
+        </div>
+    </header>
+    
+    <!----home page---->
+    <section class="home" id="home">
+        <div class="content">
+            <h5>DISCOVER THE COLORFUL WORLD</h5>
+            <h1>NEW ADVENTURE</h1>
+            <a href="#" onclick="buynow()" class="btn">DISCOVER MORE</a>
+        </div>
+    </section>
+    
+    
+ 
+    <!-----packages page---->
+    <section class="package" id="package">
+        <h1 class="heading">
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/goa 1.jpg" alt="">
+                <div class="content">
+                    <h2><i class="fas fa-map-marker-alt"></i>GOA</h2>
+                    <p>Embrace the Goa Vibe! Beaches, Culture & Adventure Await. Book Your Escape Today! </p>
+                    <div class="price">₹7999<span>₹9999</span></div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><br>
+                    </div>
+                    <a href="/" class="btn"onclick="buynow()">book now</a>
+                    <a href="/" class="btn"onclick="buynow()">view</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/ladakh.jpg" alt="Ladakh Image">
+                <div class="content">
+                    <h2><i class="fas fa-map-marker-alt"></i>LADAKH</h2>
+                    <p>Ladakh Awaits! Explore the Land of High Passes ladakh. Book Your Adventure Today!</p>
+                    <div class="price">₹5999<span>₹8999</span></div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><br>
+                    </div>
+                    <a href="/" class="btn"onclick="buynow()">book now</a>
+                    <a href="/" class="btn"onclick="buynow()">view</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/maldives.jpeg" alt="Lmaldives Image">
+                <div class="content">
+                    <h2><i class="fas fa-map-marker-alt"></i>MALDIVES</h2>
+                    <p>Maldives Marvel: Your Exclusive Island Hideaway Awaits.  Book Your Adventure Today!</p>
+                    <div class="price">₹12999<span>₹19999</span></div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><br>
+                    </div>
+                    <a href="/" class="btn"onclick="buynow()">book now</a>
+                    <a href="/" class="btn"onclick="buynow()">view</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/agra.jpg" alt="agra Image">
+                <div class="content">
+                    <h2><i class="fas fa-map-marker-alt"></i>AGRA</h2>
+                    <p>Journey Through Time: Agra Edition! Book Now for a Historic Adventure</p>
+                    <div class="price">₹6999<span>₹12999</span></div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><br>
+                    </div>
+                    <a href="/" class="btn"onclick="buynow()">book now</a>
+                    <a href="/" class="btn"onclick="buynow()">view</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/munnar.jpg" alt="munnar Image">
+                <div class="content">
+                    <h2><i class="fas fa-map-marker-alt"></i>MUNNAR</h2>
+                    <p>Munnar Unveiled: Your Nature's Canvas Awaits. Book Now for a One-of-a-Kind Experience.</p>
+                    <div class="price">₹9999<span>₹12999</span> </div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><br>
+                    </div>
+                    <a href="/" class="btn"onclick="buynow()">book now</a>
+                    <a href="/" class="btn"onclick="buynow()">view</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/Ooty.jpg" alt="Ooty Image">
+                <div class="content">
+                    <h2><i class="fas fa-map-marker-alt"></i> OOTY</h2>
+                    <p>Discover Ooty's Delights! Your Unforgettable Journey Begins Here. Book Now.</p>
+                    <div class="price">₹4999<span>₹7999</span></div>
+                    <div class="star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span><br>
+                    </div>
+                    <a href="/" class="btn"onclick="buynow()">book now</a>
+                    <a href="/" class="btn"onclick="buynow()">view</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-----services page---->
+
+    <section class="services" id="services">
+        <h1 class="heading">
+            <span>s</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-hotel"></i>
+                <h2>Affordable hotels</h2>
+                <p>Budget Bliss Awaits!<br>
+                    Explore our selection of affordable hotels offering comfort and convenience. Book your wallet-friendly stay today!</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h2>Food and drinks </h2>
+                <p>Delight Your Senses!<br>
+                    Explore our tantalizing food and drink options. Reserve your spot today!"</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h2>Safty guide</h2>
+                <p>Your Safety, Our Promise!<br>
+                    Discover our unique safety measures designed to ensure your peace of mind throughout your stay</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-globe-asia"></i>
+                <h2>Around the world</h2>
+                <p> Globe in Your Hands!<br>
+                    Embark on a journey across continents with our diverse travel packages</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-plane"></i>
+                <h2>Fastest travel</h2>
+                <p>Let-Set Go!<br>
+                    Explore our exclusive, lightning-fast travel options. Book now for unparalleled speed and convenience."</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-hiking"></i>
+                <h2>Adventures</h2>
+                <p>Adventure Awaits!<br>
+                    Embark on adrenaline-pumping experiences with our thrilling adventure packages. Book now for unforgettable escapades</p>
+            </div>
+        </div>
+    </section>
+
+
+   <!-----gallery page---->
+
+   <section class="gallery" id="gallery">
+        <h1 class="heading">
+            <span>g</span>
+            <span>a</span>
+            <span>l</span>
+            <span>l</span>
+            <span>e</span>
+            <span>r</span>
+            <span>y</span>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/gallery.1.jpg" alt="">
+                <div class="content">
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/gallery.2.jpg" alt="">
+                <div class="content">
+                    
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/gallery.3.jpg" alt="">
+                <div class="content">
+                
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/gallery.4.jpg" alt="">
+                <div class="content">
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/gallery.5.jpg" alt="">
+                <div class="content">
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/gallery.6.jpg" alt="">
+                <div class="content">
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/gallery.7.jpg" alt="">
+                <div class="content">
+                    <h2>amazing places</h2>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/gallery.8.jpg" alt="">
+                <div class="content">
+                    
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='') }}image/gallery.9.jpg" alt="">
+                <div class="content">
+                   
+                </div>
+            </div>
+        </div>
+   </section>
+
+ <!-----review page---->
+
+ 
+<section class="review" id="review">
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+    </h1>
+    <div class="review-slider">
+        <div class="swiper-wrapper">
+                <div class="review">
+                    <img src="static/image/review1.avif" alt="review">
+                    <div class="name">John</div>
+                    <div class="date">May 20, 2024</div>
+                    <div class="content">
+                        <p>The adventure tour was amazing! The guides were knowledgeable and the scenery was breathtaking. I highly recommend it to anyone looking for an exciting trip.</p>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="review">
+                    <img src="static/image/review6.png" alt="review">
+                    <div class="name">travelar</div>
+                    <div class="date">March 18, 2024</div>
+                    <div class="content">
+                        <p>This tour exceeded all my expectations. Every day was packed with adventure, and the accommodations were comfortable. I can't wait to book another trip with Adventure Travel Tour!</p>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="review">
+                    <img src="static/image/review4.avif" alt="review">
+                    <div class="name">Michael Johnson</div>
+                    <div class="date">june 15, 2024</div>
+                    <div class="content">
+                        <p>Such an incredible experience! The tour was well-organized, and the activities were thrilling. I'll definitely be recommending this to all my friends and family.</p>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="review">
+                    <img src="static/image/review3.avif" alt="review">
+                    <div class="name">sophia</div>
+                    <div class="date">august 12, 2024</div>
+                    <div class="content">
+                        <p>I had an amazing time on this tour! The guides were friendly and made sure everyone felt safe throughout the entire trip. I'll cherish the memories forever.</p>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>  
+                <div class="review">
+                    <img src="static/image/review5.png" alt="review">
+                    <div class="name">jack</div>
+                    <div class="date">july 10, 2024</div>
+                    <div class="content">
+                        <p>What an adventure! From hiking through stunning landscapes to trying local cuisine, every moment was unforgettable. Can't wait to join another tour soon!</p>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="review">
+                        <img src="static/image/review2.jpg" alt="review">
+                        <div class="name">oviya</div>
+                        <div class="date">january 10, 2024</div>
+                        <div class="content">
+                            <p>This tour exceeded all my expectations. Every day was packed with adventure, and the accommodations were comfortable. I can't wait to book another trip with Adventure Travel Tour!</p>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                </div>
+        </div>
+    </div>
+    
+</section>
+
+
+     <!-----contact page---->
+-
+    <section class="contact" id="contact">
+        <h1 class="heading">
+            <span>c</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+        </h1>
+        <div class="row">
+            <div class="image">
+                <img src="{{ url_for('static', filename='') }}image/contact.jpg" alt="">
+            </div>
+            <form action="">
+                <div class="inputbox">
+                    <input type="text" placeholder="name" required>
+                    <input type="email" placeholder="email" required>
+                </div>
+                <div class="inputbox">
+                    <input type="tel" placeholder="mobile number" required>
+                    <input type="text" placeholder="subject">
+                </div>
+                <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+               <a href="/" class="btn" onclick="buynow()">send message</a>
+            </form>
+        </div>
+    </section>
+
+    <!------footer section----->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>About us</h3>
+                <p>the Adventure Travel Trade Association is the largest global network of adventure travel leaders. Our community is made up of 30,000 individual guides, tour operators, lodges, travel advisors, tourism boards, destination marketing and management organizations.</p>
+            </div>
+            <div class="box">
+                <h3>branch locations</h3>
+               <li>india</li> 
+               <li>USA</li>
+               <li>France</li>
+               <li>Dubai</li>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">home</a>
+                <a href="#package">package</a>
+                <a href="#services">services</a>
+                <a href="#gallery">gallery</a>
+                <a href="#review">review</a>
+                <a href="#contact">contact</a>
+                <a href="/feedback">Feedback</a>
+            </div>
+            <div class="box">
+                <h3>Follow us</h3>
+                <a href="https://www.facebook.com/login/">facebook <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/accounts/login/">instagram <i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://twitter.com/i/flow/login">twitter<i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/home">linkedin <i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+
+    </script>
+  
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
+
+
+

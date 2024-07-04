@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdventureTravel</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='') }}image/logo.jpg" type="image/x-icon">
+     <!----css file link---->
+     <link rel="stylesheet" href="{{ url_for('static', filename='feedback.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Customer Feedback</h1>
+    <form action="/">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating" required>
+        <option value="" disabled selected>Select rating</option>
+        <option value="5">Excellent <span>&#x1F60D</span></option>
+        <option value="4">Very Good<span>&#x1F60A</span></option>
+        <option value="3">Good<span>&#x1F60E</span></option>
+        <option value="2">Fair<span>&#x1F636</span></option>
+        <option value="1">Poor<span>&#x1F608</span></option>
+      </select>
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+      
+      <a href="/feedmessage" class="btn">Submit Feedback</a>
+    </form>
+  </div>
+</body>
+</html>
